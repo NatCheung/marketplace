@@ -289,6 +289,7 @@ app-icon-button {
   .section_1_text {
     font-size: 60px;
     font-weight: 500;
+    min-width: 300px;
   }
 }
 
@@ -556,4 +557,25 @@ common-image-carousel {
   .landing_page_wrapper {
     padding: 0 5rem;
   }
+
+  .section_1 {
+    .section_1_text {
+      font-size: 5.859vw;
+    }
+  }
+
+  .info_card_title {
+    font-size: 4.883vw;
+  }
+
+  .info_card_desc {
+    font-size: 1.758vw;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .section_1 {
+    flex-direction: column;
+  }
+
 }
