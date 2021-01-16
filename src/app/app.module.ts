@@ -18,8 +18,12 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ToolsModule } from '../app/components/tools/tools.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RethinkingMyWorkModule } from './components/rethinking-my-work/rethinking-my-work.module';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { httpInterceptorProviders } from './interceptors';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SpinnerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,9 +41,11 @@ import { RethinkingMyWorkModule } from './components/rethinking-my-work/rethinki
     IvyCarouselModule,
     ToolsModule,
     ReactiveFormsModule,
-    RethinkingMyWorkModule
+    RethinkingMyWorkModule,
+    MatProgressSpinnerModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
